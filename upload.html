@@ -1,0 +1,48 @@
+<!doctype html>
+<style type="text/css">
+body {
+	background-color: #FFFFFF;
+}
+</style>
+<BR>
+<BR>
+<BR>
+<div align="center">
+  <p><img src="https://s3-us-west-2.amazonaws.com/display-templates/WEB/upload-cloud-flat.png"></p>
+  <table width="459" border="0">
+    <tbody>
+      <tr>
+        <td width="462"><div align="center">
+          <hr>
+        </div>
+          <form id="myForm" align="center">
+            <input type="text" name="myName" placeholder="Your name..">
+            <input type="file" name="myFile">
+            <input type="submit" value="Upload File" 
+           onclick="this.value='Uploading..';
+                    google.script.run.withSuccessHandler(fileUploaded)
+                    .uploadFiles(this.parentNode);
+                    return false;">
+          </form>
+          <div id="output"></div>
+          <script>
+    function fileUploaded(status) {
+        document.getElementById('myForm').style.display = 'none';
+        document.getElementById('output').innerHTML = status;
+    }
+          </script>
+          <script src="js/app.min.js"></script>
+        <style>
+ input { display:block; margin: 20px; }
+ 
+          </style>
+        <hr></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>&nbsp;</h3>
+  <p>&nbsp;</p>
+</div>
+
+
+

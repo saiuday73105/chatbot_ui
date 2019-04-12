@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conversational UI Demo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <article role="log" aria-live="polite" aria-atomic="false">
+        <ul class="chat"></ul>
+        <noscript>
+          <ul class="chat">
+            <li class="message bot show"><p>I'm sorry, but you need JavaScript turned on for this website to function.</p></li>
+          </ul>
+        </noscript>
+      </article>
+      <div class="content" role="document" aria-hidden="true" aria-label="Information">
+        <button class="close" aria-label="Close">&times;</button>
+        <article id="feedback-p1">
+          <h3>Positive feedback</h3>
+          <p>Thank you for giving your feedback.</p>
+        </article>
+        <article id="feedback-p2">
+          <h3>Negative feedback</h3>
+          <p>Thank you for giving your feedback.</p>
+        </article>
+        <article id="documents-previous">
+          <h3>Previous Documents</h3>
+          <p>The previous documents uploaded are :</p>
+        </article>
+        <article id="documents-upload">
+          <h3>Upload a new document</h3>
+          <p>Click the below button to be redirected to select the document.</p>
+          <input id='buttonid' type='button' value='Upload' />
+        </article>
+        <article id="query-new">
+          <h3>Add a new query :</h3>
+          <p>Enter query here...</p>
+          <form>
+            <input type="text" name="txtfield"><br>
+            <input type="submit">
+          </form>
+        </article>
+      </div>
+    </div>
+    <script src="js/app.min.js"></script>
+    <script src="js/node.js"></script>
+  </body>
+</html>
